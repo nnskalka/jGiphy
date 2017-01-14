@@ -1,5 +1,7 @@
 package org.skalka.jgiphy.responses;
 
+import java.util.Arrays;
+import java.util.Iterator;
 
 import org.codehaus.jackson.annotate.JsonSetter;
 import org.skalka.jgiphy.GiphyResponse;
@@ -20,6 +22,11 @@ public class SingleEntryGiphyResponse implements GiphyResponse {
 	@Override
 	public GifEntry getRandomEntry() {
 		return this.entry;
+	}
+	
+	@Override
+	public Iterator<GifEntry> getEntries() {
+		return Arrays.asList((GifEntry)this.entry).iterator();
 	}
 	
 	@JsonSetter("data")

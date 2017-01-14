@@ -1,6 +1,7 @@
 package org.skalka.jgiphy;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Test;

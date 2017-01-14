@@ -17,12 +17,12 @@ public class SingleEntryGiphyResponseTest {
 		final ObjectMapper om = new ObjectMapper();
 		
 		try {
-			final SingleEntryGiphyResponse megr = om.readValue(json, SingleEntryGiphyResponse.class);
+			final SingleEntryGiphyResponse segr = om.readValue(json, SingleEntryGiphyResponse.class);
 			
-			assertNotNull(megr.getRandomEntry());
-			assertNull(megr.getPagination());
-			assertNotNull(megr.getEntry(0));
-			assertNotNull(megr.getMeta());
+			assertNotNull(segr.getRandomEntry());
+			assertNull(segr.getPagination());
+			assertNotNull(segr.getEntry(0));
+			assertNotNull(segr.getMeta());
 		} catch (Exception e) {
 			e.printStackTrace();
 			assertTrue(false);

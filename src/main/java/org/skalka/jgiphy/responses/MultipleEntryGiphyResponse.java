@@ -1,6 +1,8 @@
 package org.skalka.jgiphy.responses;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 import org.codehaus.jackson.annotate.JsonSetter;
@@ -24,6 +26,11 @@ public class MultipleEntryGiphyResponse implements GiphyResponse {
 	public GifEntry getRandomEntry() {
 		int randomIndex = (int)(this.entries.size()*Math.random());
 		return this.entries.get(randomIndex);
+	}
+
+	@Override
+	public Iterator<GifEntry> getEntries() {
+		return Arrays.asList((GifEntry[])this.entries.toArray()).iterator();
 	}
 	
 	@JsonSetter("data")
