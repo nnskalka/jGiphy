@@ -2,9 +2,9 @@ package org.skalka.jgiphy;
 
 import java.util.Iterator;
 
-import org.skalka.jgiphy.data.GifEntry;
-import org.skalka.jgiphy.data.internal.ResponseMetadata;
-import org.skalka.jgiphy.data.internal.ResponsePagination;
+import org.skalka.jgiphy.internal.data.GifEntry;
+import org.skalka.jgiphy.internal.data.ResponseMetadata;
+import org.skalka.jgiphy.internal.data.ResponsePagination;
 
 public interface GiphyResponse {
 	public GifEntry getEntry(int index);

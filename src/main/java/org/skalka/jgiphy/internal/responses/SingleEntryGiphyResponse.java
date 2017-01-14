@@ -1,14 +1,14 @@
-package org.skalka.jgiphy.responses;
+package org.skalka.jgiphy.internal.responses;
 
 import java.util.Arrays;
 import java.util.Iterator;
 
 import org.codehaus.jackson.annotate.JsonSetter;
 import org.skalka.jgiphy.GiphyResponse;
-import org.skalka.jgiphy.data.FullGifEntry;
-import org.skalka.jgiphy.data.GifEntry;
-import org.skalka.jgiphy.data.internal.ResponseMetadata;
-import org.skalka.jgiphy.data.internal.ResponsePagination;
+import org.skalka.jgiphy.internal.data.FullGifEntry;
+import org.skalka.jgiphy.internal.data.GifEntry;
+import org.skalka.jgiphy.internal.data.ResponseMetadata;
+import org.skalka.jgiphy.internal.data.ResponsePagination;
 
 public class SingleEntryGiphyResponse implements GiphyResponse {
 	private FullGifEntry entry;

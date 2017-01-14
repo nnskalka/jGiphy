@@ -1,4 +1,4 @@
-package org.skalka.jgiphy.data;
+package org.skalka.jgiphy.internal.data;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Test;
+import org.skalka.jgiphy.internal.data.FullGifEntry;
+import org.skalka.jgiphy.internal.data.GifEntry;
 
 public class GifEntryTests {
 	@Test

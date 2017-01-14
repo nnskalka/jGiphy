@@ -1,11 +1,10 @@
-package org.skalka.jgiphy.data;
+package org.skalka.jgiphy.internal.data;
 
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.codehaus.jackson.annotate.JsonSetter;
-import org.skalka.jgiphy.data.internal.Image;
 
 public class RandomGifEntry implements GifEntry{
 	private String 	type;
@@ -23,7 +22,7 @@ public class RandomGifEntry implements GifEntry{
 	}
 
 	@JsonSetter("type")
-	public void setType(String type) {
+	private void setType(String type) {
 		this.type = type;
 	}
 
@@ -33,7 +32,7 @@ public class RandomGifEntry implements GifEntry{
 	}
 	
 	@JsonSetter("id")
-	public void setId(String id) {
+	private void setId(String id) {
 		this.id = id;
 	}
 
@@ -43,7 +42,7 @@ public class RandomGifEntry implements GifEntry{
 	}
 
 	@JsonSetter("url")
-	public void setUrl(String url) {
+	private void setUrl(String url) {
 		this.url = url;
 	}
 	
@@ -53,7 +52,7 @@ public class RandomGifEntry implements GifEntry{
 	}
 	
 	@JsonSetter("username")
-	public void setUsername(String username) {
+	private void setUsername(String username) {
 		this.username = username;
 	}
 	
@@ -63,7 +62,7 @@ public class RandomGifEntry implements GifEntry{
 	}
 	
 	@JsonSetter("caption")
-	public void setCaption(String caption) {
+	private void setCaption(String caption) {
 		this.caption = caption;
 	}
 

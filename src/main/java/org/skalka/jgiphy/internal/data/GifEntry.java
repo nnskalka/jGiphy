@@ -1,9 +1,6 @@
-package org.skalka.jgiphy.data;
+package org.skalka.jgiphy.internal.data;
 
 import java.util.Date;
-
-import org.skalka.jgiphy.data.internal.Image;
-import org.skalka.jgiphy.data.internal.User;
 
 public interface GifEntry {
 

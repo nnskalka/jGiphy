@@ -1,4 +1,4 @@
-package org.skalka.jgiphy.data.internal;
+package org.skalka.jgiphy.internal.data;
 
 import org.codehaus.jackson.annotate.JsonSetter;
 

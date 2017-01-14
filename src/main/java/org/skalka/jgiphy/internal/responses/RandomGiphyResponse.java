@@ -1,12 +1,16 @@
-package org.skalka.jgiphy.responses;
+package org.skalka.jgiphy.internal.responses;
+
+import java.util.Arrays;
+import java.util.Iterator;
 
 import org.codehaus.jackson.annotate.JsonSetter;
-import org.skalka.jgiphy.data.GifEntry;
-import org.skalka.jgiphy.data.RandomGifEntry;
-import org.skalka.jgiphy.data.internal.ResponseMetadata;
-import org.skalka.jgiphy.data.internal.ResponsePagination;
+import org.skalka.jgiphy.GiphyResponse;
+import org.skalka.jgiphy.internal.data.GifEntry;
+import org.skalka.jgiphy.internal.data.RandomGifEntry;
+import org.skalka.jgiphy.internal.data.ResponseMetadata;
+import org.skalka.jgiphy.internal.data.ResponsePagination;
 
-public class RandomGiphyResponse {
+public class RandomGiphyResponse implements GiphyResponse {
 	private RandomGifEntry entry;
 	private ResponseMetadata meta;
 	
@@ -16,6 +20,11 @@ public class RandomGiphyResponse {
 	
 	public GifEntry getRandomEntry() {
 		return this.entry;
+	}
+	
+	@Override
+	public Iterator<GifEntry> getEntries() {
+		return Arrays.asList((GifEntry)this.entry).iterator();
 	}
 	
 	@JsonSetter("data")

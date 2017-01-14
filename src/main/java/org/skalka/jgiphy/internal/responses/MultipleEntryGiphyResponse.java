@@ -1,4 +1,4 @@
-package org.skalka.jgiphy.responses;
+package org.skalka.jgiphy.internal.responses;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.codehaus.jackson.annotate.JsonSetter;
 import org.skalka.jgiphy.GiphyResponse;
-import org.skalka.jgiphy.data.FullGifEntry;
-import org.skalka.jgiphy.data.GifEntry;
-import org.skalka.jgiphy.data.internal.ResponseMetadata;
-import org.skalka.jgiphy.data.internal.ResponsePagination;
+import org.skalka.jgiphy.internal.data.FullGifEntry;
+import org.skalka.jgiphy.internal.data.GifEntry;
+import org.skalka.jgiphy.internal.data.ResponseMetadata;
+import org.skalka.jgiphy.internal.data.ResponsePagination;
 
 public class MultipleEntryGiphyResponse implements GiphyResponse {
 	private List<FullGifEntry> entries;
@@ -30,7 +30,7 @@ public class MultipleEntryGiphyResponse implements GiphyResponse {
 
 	@Override
 	public Iterator<GifEntry> getEntries() {
-		return Arrays.asList((GifEntry[])this.entries.toArray()).iterator();
+		return Arrays.asList(this.entries.toArray(new GifEntry[1])).iterator();
 	}
 	
 	@JsonSetter("data")

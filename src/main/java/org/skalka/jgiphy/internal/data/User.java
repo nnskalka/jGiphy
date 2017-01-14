@@ -1,4 +1,4 @@
-package org.skalka.jgiphy.data.internal;
+package org.skalka.jgiphy.internal.data;
 
 import org.codehaus.jackson.annotate.JsonSetter;
 
@@ -14,7 +14,7 @@ public class User {
 	}
 	
 	@JsonSetter("avatar_url")
-	public void setAvatarUrl(String avatarUrl) {
+	private void setAvatarUrl(String avatarUrl) {
 		this.avatarUrl = avatarUrl;
 	}
 	
@@ -23,7 +23,7 @@ public class User {
 	}
 
 	@JsonSetter("banner_url")
-	public void setBannerUrl(String bannerUrl) {
+	private void setBannerUrl(String bannerUrl) {
 		this.bannerUrl = bannerUrl;
 	}
 	
@@ -32,7 +32,7 @@ public class User {
 	}
 
 	@JsonSetter("profile_url")
-	public void setProfileUrl(String profileUrl) {
+	private void setProfileUrl(String profileUrl) {
 		this.profileUrl = profileUrl;
 	}
 	
@@ -41,7 +41,7 @@ public class User {
 	}
 
 	@JsonSetter("username")
-	public void setUsername(String username) {
+	private void setUsername(String username) {
 		this.username = username;
 	}
 	
@@ -50,7 +50,7 @@ public class User {
 	}
 
 	@JsonSetter("display_name")
-	public void setDisplayName(String displayName) {
+	private void setDisplayName(String displayName) {
 		this.displayName = displayName;
 	}
 }

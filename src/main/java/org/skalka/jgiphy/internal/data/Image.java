@@ -1,4 +1,4 @@
-package org.skalka.jgiphy.data.internal;
+package org.skalka.jgiphy.internal.data;
 
 import java.net.URL;
 
@@ -22,7 +22,7 @@ public class Image {
 	}
 
 	@JsonSetter("url")
-	public void setUrl(URL url) {
+	protected void setUrl(URL url) {
 		this.url = url;
 	}
 	
@@ -31,7 +31,7 @@ public class Image {
 	}
 
 	@JsonSetter("width")
-	public void setWidth(Integer width) {
+	protected void setWidth(Integer width) {
 		this.width = width;
 	}
 	
@@ -40,7 +40,7 @@ public class Image {
 	}
 
 	@JsonSetter("height")
-	public void setHeight(Integer height) {
+	protected void setHeight(Integer height) {
 		this.height = height;
 	}
 	
@@ -49,7 +49,7 @@ public class Image {
 	}
 
 	@JsonSetter("size")
-	public void setSize(Integer size) {
+	protected void setSize(Integer size) {
 		this.size = size;
 	}
 	
@@ -58,7 +58,7 @@ public class Image {
 	}
 
 	@JsonSetter("frames")
-	public void setFrames(Integer frames) {
+	protected void setFrames(Integer frames) {
 		this.frames = frames;
 	}
 	
@@ -67,7 +67,7 @@ public class Image {
 	}
 
 	@JsonSetter("mp4")
-	public void setMp4(URL mp4) {
+	protected void setMp4(URL mp4) {
 		this.mp4 = mp4;
 	}
 	
@@ -76,7 +76,7 @@ public class Image {
 	}
 
 	@JsonSetter("mp4_size")
-	public void setMp4_size(Integer mp4_size) {
+	protected void setMp4_size(Integer mp4_size) {
 		this.mp4Size = mp4_size;
 	}
 	
@@ -85,7 +85,7 @@ public class Image {
 	}
 
 	@JsonSetter("webp")
-	public void setWebp(URL webp) {
+	protected void setWebp(URL webp) {
 		this.webp = webp;
 	}
 	
@@ -94,7 +94,7 @@ public class Image {
 	}
 	
 	@JsonSetter("webp_size")
-	public void setWebp_size(Integer webp_size) {
+	protected void setWebp_size(Integer webp_size) {
 		this.webpSize = webp_size;
 	}
 }

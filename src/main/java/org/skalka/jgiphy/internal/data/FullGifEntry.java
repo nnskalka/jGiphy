@@ -1,4 +1,4 @@
-package org.skalka.jgiphy.data;
+package org.skalka.jgiphy.internal.data;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -8,8 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.codehaus.jackson.annotate.JsonSetter;
-import org.skalka.jgiphy.data.internal.Image;
-import org.skalka.jgiphy.data.internal.User;
 
 public class FullGifEntry implements GifEntry {
 	private String 	type;
