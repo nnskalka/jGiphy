@@ -7,42 +7,42 @@ import org.skalka.jgiphy.data.internal.User;
 
 public interface GifEntry {
 
-	String getType();
+	public String getType();
 
-	String getId();
+	public String getId();
 
-	String getUrl();
+	public String getUrl();
 
-	String getSlug();
+	default public String getSlug() { return null; };
 
-	String getBitlyGifUrl();
+	default public String getBitlyGifUrl() { return null; };
 
-	String getBitlyUrl();
+	default public String getBitlyUrl() { return null; };
 
-	String getEmbedUrl();
+	default public String getEmbedUrl() { return null; };
 
-	String getUsername();
+	public String getUsername();
 
-	String getSource();
+	default public String getSource() { return null; };
 
-	String getRating();
+	default public String getRating() { return null; };
 
-	String getCaption();
+	public String getCaption();
 
-	String getContentUrl();
+	default public String getContentUrl() { return null; };
 
-	User getUser();
+	default public User getUser() { return null; };
 
-	String getSourceTld();
+	default public String getSourceTld() { return null; };
 
-	String getSourcePostUrl();
+	default public String getSourcePostUrl() { return null; };
 
-	Boolean getIsIndexable();
+	default public Boolean getIsIndexable() { return null; };
 
-	Date getImportDatetime();
+	default public Date getImportDatetime() { return null; };
 
-	Date getTrendingDatetime();
+	default public Date getTrendingDatetime() { return null; };
 
-	Image getImage(String name);
+	public Image getImage(String name);
 
 }

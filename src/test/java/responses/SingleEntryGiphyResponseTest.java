@@ -1,4 +1,4 @@
-package org.skalka.jgiphy;
+package responses;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
