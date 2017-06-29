@@ -13,6 +13,8 @@ public class MultipleEntryGiphyResponseTest {
 		final String json = Unirest.get("http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC").asString().getBody();
 		final ObjectMapper om = new ObjectMapper();
 		
+		System.out.println(json);
+		
 		final MultipleEntryGiphyResponse megr = om.readValue(json, MultipleEntryGiphyResponse.class);
 		
 		assertNotNull(megr.getRandomEntry());

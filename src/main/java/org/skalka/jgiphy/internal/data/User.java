@@ -8,6 +8,7 @@ public class User {
 	public String profileUrl;
 	public String username;
 	public String displayName;
+	public String twitter;
 	
 	public String getAvatarUrl() {
 		return avatarUrl;
@@ -52,5 +53,14 @@ public class User {
 	@JsonSetter("display_name")
 	private void setDisplayName(String displayName) {
 		this.displayName = displayName;
+	}
+	
+	public String getTwitter() {
+		return twitter;
+	}
+
+	@JsonSetter("twitter")
+	private void setTwitter(String twitter) {
+		this.twitter = twitter;
 	}
 }
